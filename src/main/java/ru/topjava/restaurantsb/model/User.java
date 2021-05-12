@@ -8,6 +8,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
@@ -17,7 +18,7 @@ import java.util.Set;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @ToString
-public class User extends AbstractId {
+public class User extends AbstractId implements Serializable {
 
     @Column(name = "email", nullable = false, unique = true)
     @Email
@@ -32,6 +33,10 @@ public class User extends AbstractId {
     @JoinColumn(name = "user_id")
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Set<Role> roles;
+
+    @Column(name="passwd")
+    @Size(max = 20)
+    private String password;
 
     public User(String email, Role... roles) {
         this.email = email;

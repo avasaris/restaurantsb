@@ -49,4 +49,8 @@ public abstract class AbstractId implements Persistable<Integer> {
     public int hashCode() {
         return id == null ? 0 : id;
     }
+
+    public Integer id(){
+        return id;
+    }
 }
