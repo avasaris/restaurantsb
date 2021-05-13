@@ -1,8 +1,6 @@
 package ru.topjava.restaurantsb.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -26,7 +24,7 @@ public class Restaurant extends AbstractId {
     private String name;
 
 
-    @OneToMany(mappedBy = "restaurant", fetch = FetchType.LAZY) // TODO LAZY & JSON initialisation
+    @OneToMany(mappedBy = "restaurant", fetch = FetchType.LAZY)
     @OnDelete(action = OnDeleteAction.CASCADE)
    // @JsonManagedReference
   //  @JsonInclude(value = JsonInclude.Include.NON_EMPTY, content = JsonInclude.Include.NON_NULL)
