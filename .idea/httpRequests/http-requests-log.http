@@ -1,0 +1,371 @@
+POST http://localhost:8080/api/restaurant
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "name": "ZUBR"
+}
+
+<> 2021-05-13T235458.201.json
+
+###
+
+POST http://localhost:8080/api/restaurant
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "name": "ZUBR"
+}
+
+<> 2021-05-13T235435.405.json
+
+###
+
+POST http://localhost:8080/api/restaurant/add
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "name": "ZUBR"
+}
+
+<> 2021-05-13T224739.201.json
+
+###
+
+POST http://localhost:8080/api/restaurant/add
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "name": "ZUBR"
+}
+
+<> 2021-05-13T224457.415.json
+
+###
+
+POST http://localhost:8080/api/restaurant/add
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "name": "ZUBR"
+}
+
+<> 2021-05-13T224431.401.json
+
+###
+
+### Send POST request with json body
+POST http://localhost:8080/api/restaurant/add
+Content-Type: application/json
+
+{
+  "name": "ZUBR"
+}
+
+<>
+
+GET http://localhost:8080/api/users
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T003202.200.json
+
+###
+
+POST http://localhost:8080/api/users/
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "firstName": "New_First",
+  "lastName": "New_Last"
+}
+
+<> 2021-05-13T003120.201.json
+
+###
+
+GET http://localhost:8080/api/users
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T003029.200.json
+
+###
+
+GET http://localhost:8080/api/users
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T003017.403.json
+
+###
+
+DELETE http://localhost:8080/api/users/3
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/api/users/3
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T002939.200.json
+
+###
+
+GET http://localhost:8080/api/users/3
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T002931.403.json
+
+###
+
+GET http://localhost:8080/api/users/1
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T002925.403.json
+
+###
+
+GET http://localhost:8080/api/users/2
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T002920.403.json
+
+###
+
+POST http://localhost:8080/api/users/
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "firstName": "New_First",
+  "lastName": "New_Last"
+}
+
+<> 2021-05-13T002850.201.json
+
+###
+
+POST http://localhost:8080/api/users/
+Authorization: Basic user@yandex.ru user
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "firstName": "New_First",
+  "lastName": "New_Last"
+}
+
+<> 2021-05-13T002834.403.json
+
+###
+
+POST http://localhost:8080/api/account
+Authorization: Basic user@yandex.ru user
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "firstName": "New_First",
+  "lastName": "New_Last"
+}
+
+<> 2021-05-13T002814.405.json
+
+###
+
+PUT http://localhost:8080/api/account
+Authorization: Basic user@yandex.ru user
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "firstName": "New_First",
+  "lastName": "New_Last"
+}
+
+<> 2021-05-13T002802.405.json
+
+###
+
+POST http://localhost:8080/api/users/
+Content-Type: application/json
+Authorization: Basic admin@yandex.ru admin
+
+{
+  "email": "user@gmail.com",
+  "firstName": "New_First",
+  "lastName": "New_Last"
+}
+###
+
+
+DELETE http://localhost:8080/api/users/3
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001449.403.json
+
+###
+
+GET http://localhost:8080/api/users
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001421.403.json
+
+###
+
+GET http://localhost:8080/api/users/1
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001417.403.json
+
+###
+
+GET http://localhost:8080/api/users/2
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001412.403.json
+
+###
+
+GET http://localhost:8080/api/users/1
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001406.403.json
+
+###
+
+GET http://localhost:8080/api/users/1
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001349.200.json
+
+###
+
+GET http://localhost:8080/api/users
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001334.200.json
+
+###
+
+GET http://localhost:8080/api/users
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001320.403.json
+
+###
+
+GET http://localhost:8080/api/users/
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001249.403.json
+
+###
+
+GET http://localhost:8080/api/account/1
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001209.403.json
+
+###
+
+GET http://localhost:8080/api/account/2
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001203.403.json
+
+###
+
+GET http://localhost:8080/api/account/3
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001155.403.json
+
+###
+
+GET http://localhost:8080/api/account
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T001147.200.json
+
+###
+
+POST http://localhost:8080/api/account/register
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "test"
+}
+
+<> 2021-05-13T001114.201.json
+
+###
+
+POST http://localhost:8080/api/account/register
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "test"
+}
+###
+
+###
+GET http://localhost:8080/api/users/
+Authorization: Basic user@yandex.ru user
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-13T000929.200.json
+
+##
+
+###

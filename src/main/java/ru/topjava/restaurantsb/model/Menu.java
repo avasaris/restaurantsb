@@ -1,5 +1,6 @@
 package ru.topjava.restaurantsb.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.annotations.OnDelete;
@@ -21,6 +22,7 @@ public class Menu extends AbstractId {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurant_id", nullable = false)
     @NotNull
+   // @JsonBackReference
     private Restaurant restaurant;
 
     @Column(name = "local_date", nullable = false)
@@ -29,5 +31,6 @@ public class Menu extends AbstractId {
 
     @OneToMany(mappedBy = "menu")
     @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
     private Set<Dish> dishes;
 }
