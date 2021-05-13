@@ -11,6 +11,8 @@ import java.util.Optional;
 
 @Transactional(readOnly = true)
 @Repository
+// https://docs.spring.io/spring-data/rest/docs/current/reference/html/#customizing-sdr.hiding-repository-crud-methods
+@RestResource(exported = false)
 public interface UserRepository extends JpaRepository<User, Integer> {
 
     @RestResource(rel = "by-email", path = "by-email")
