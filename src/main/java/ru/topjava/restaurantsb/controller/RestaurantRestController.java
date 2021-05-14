@@ -13,6 +13,7 @@ import ru.topjava.restaurantsb.model.Restaurant;
 import ru.topjava.restaurantsb.model.Role;
 import ru.topjava.restaurantsb.model.User;
 import ru.topjava.restaurantsb.repository.RestaurantRepository;
+import ru.topjava.restaurantsb.to.RestaurantTo;
 import ru.topjava.restaurantsb.util.ValidationUtil;
 
 import javax.validation.Valid;
@@ -28,14 +29,15 @@ public class RestaurantRestController {
     private final RestaurantRepository restaurantRepository;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Restaurant> getAll() {
-        return restaurantRepository.findAll();
+    public List<RestaurantTo> getAll() {
+        return restaurantRepository.findAllTo();
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Restaurant getById(@PathVariable Integer id) {
-        return restaurantRepository.findById(id).orElseThrow(
+    public RestaurantTo getById(@PathVariable Integer id) {
+        Restaurant restaurant = restaurantRepository.findById(id).orElseThrow(
                 () -> new IllegalRequestDataException("Illegal id for restaurant search"));
+        return new RestaurantTo(restaurant);
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
