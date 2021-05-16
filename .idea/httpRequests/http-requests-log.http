@@ -1,24 +1,169 @@
-POST http://localhost:8080/api/libraries/
+GET http://localhost:8080/api/restaurant/1/menu/2
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T141350.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/1/menu
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T141339.200.json
+
+###
+
+POST http://localhost:8080/api/restaurant/
 Authorization: Basic admin@yandex.ru admin
 Content-Type: application/json
 
 {
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
+  "name": "GAGARIN"
+}
+
+<> 2021-05-16T141332.201.json
+
+###
+
+POST http://localhost:8080/api/restaurant/
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "name": "GAGARIN"
+}
+
+<> 2021-05-16T140331.201.json
+
+###
+
+GET http://localhost:8080/api/restaurant/1/menu
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T135829.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/1/menu
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T135458.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/1/menu/2
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T135448.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/1/
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T135300.404.json
+
+###
+
+GET http://localhost:8080/api/restaurant/4/menu/
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T134530.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T134455.200.json
+
+###
+
+POST http://localhost:8080/api/restaurant/
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "name": "GAGARIN"
+}
+
+<> 2021-05-16T134434.201.json
+
+###
+
+GET http://localhost:8080/api/restaurant/1/
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T134406.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/1/menu/
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T134232.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/1/menus
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T134213.404.json
+
+###
+
+GET http://localhost:8080/api/restaurant/1/
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T134204.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/4/menu/
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T134132.200.json
+
+###
+
+POST http://localhost:8080/api/restaurant/
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "name": "GAGARIN"
 }
 
 <> 2021-05-15T204520.400.json
 
 ###
 
-GET http://localhost:8080/api/libraries/
+GET http://localhost:8080/api/restaurant/
 Authorization: Basic admin@yandex.ru admin
 Accept: application/json
 Content-Type: application/json
@@ -565,230 +710,5 @@ Content-Type: application/json
 }
 
 <> 2021-05-14T213942.201.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-14T213252.201.json
-
-###
-
-GET http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-14T213241.200.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "userName": "Marco",
-  "company": "MP",
-  "items": [
-    {
-      "name": "CD",
-      "quantity": "10"
-    },
-    {
-      "name": "DVD",
-      "quantity": "5"
-    }
-  ]
-}
-
-<> 2021-05-14T213008.201.json
-
-###
-
-GET http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-14T212908.200.json
-
-###
-
-GET http://localhost:8080/api/library/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-14T212851.404.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "userName": "Marco",
-  "company": "MP",
-  "items": [
-    {
-      "name": "CD",
-      "quantity": "10"
-    },
-    {
-      "name": "DVD",
-      "quantity": "5"
-    }
-  ]
-}
-
-<> 2021-05-14T211800.400.json
-
-###
-
-POST http://localhost:8080/api/menu
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "date": "2010-01-01",
-  "dishes": [{
-    "name": "aaa",
-    "price": "20.00"
-  }]
-}
-
-<> 2021-05-14T205406.400.json
-
-###
-
-POST http://localhost:8080/api/menu
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "date": "2010-01-01",
-  "dishes": [{
-    "name": "aaa",
-    "price": "20.00"
-  }]
-}
-
-<> 2021-05-14T182823.400.json
-
-###
-
-POST http://localhost:8080/api/menu
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "date": "2010-01-01",
-  "dishes": {
-    "name": "aaa",
-    "price": "20.00"
-  }
-}
-
-<> 2021-05-14T182758.400.json
-
-###
-
-POST http://localhost:8080/api/menu/1/dish
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "aaa",
-  "price": "20.00"
-}
-
-###
-
-POST http://localhost:8080/api/menu
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "date": "2010-01-01",
-  "dishes": [{
-    "name": "aaa",
-    "price": "20.00"
-  }]
-}
-
-<> 2021-05-14T181514.400.json
-
-###
-
-POST http://localhost:8080/api/menu
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "date": "2010-01-01",
-  "dishes": "aaa"
-}
-
-<> 2021-05-14T181356.400.json
-
-###
-
-POST http://localhost:8080/api/menu
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "date": "2010-01-01",
-  "dish": "aaa"
-}
-
-<> 2021-05-14T181254.201.json
-
-###
-
-GET http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-14T181205.200.json
-
-###
-
-POST http://localhost:8080/api/menu/1/dish
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "aaa",
-  "price": "20.00"
-}
-
-<> 2021-05-14T181153.201.json
-
-###
-
-GET http://localhost:8080/api/menu/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-14T181131.200.json
 
 ###

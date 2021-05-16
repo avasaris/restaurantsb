@@ -13,7 +13,11 @@ import java.util.stream.Collectors;
 @Repository
 public interface MenuRepository extends JpaRepository<Menu, Integer> {
 
-    public default List<MenuTo> findAllTo() {
+    default List<MenuTo> findAllTo() {
         return findAll().stream().map(MenuTo::new).collect(Collectors.toList());
     }
+
+    List<Menu> findByRestaurantId(Integer restaurantId);
+
+    Menu findByRestaurantIdAndId(Integer restaurantId, Integer menuId);
 }

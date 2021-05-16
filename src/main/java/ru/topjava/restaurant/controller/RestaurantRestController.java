@@ -26,11 +26,13 @@ public class RestaurantRestController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public List<RestaurantTo> getAll() {
+        log.info("getAll");
         return restaurantRepository.findAllTo();
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public RestaurantTo getById(@PathVariable Integer id) {
+        log.info("get {}", id);
         Restaurant restaurant = restaurantRepository.findById(id).orElseThrow(
                 () -> new IllegalRequestDataException("Illegal id for restaurant search"));
         return new RestaurantTo(restaurant);
@@ -38,13 +40,13 @@ public class RestaurantRestController {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.CREATED)
-    public ResponseEntity<Restaurant> add(@Valid @RequestBody Restaurant restaurant) {
+    public ResponseEntity<RestaurantTo> add(@Valid @RequestBody Restaurant restaurant) {
         log.info("add {}", restaurant);
         ValidationUtil.checkNew(restaurant);
         restaurant = restaurantRepository.save(restaurant);
         URI uriOfNewResource = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path("/api/restaurant")
                 .build().toUri();
-        return ResponseEntity.created(uriOfNewResource).body(restaurant);
+        return ResponseEntity.created(uriOfNewResource).body(new RestaurantTo(restaurant));
     }
 }

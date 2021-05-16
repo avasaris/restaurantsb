@@ -15,21 +15,18 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@ToString
 public class Restaurant extends AbstractId {
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, unique = true)
     @NotBlank
     @Size(max = 100)
     private String name;
 
-
-    @OneToMany(mappedBy = "restaurant", fetch = FetchType.LAZY)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-//    @JsonManagedReference
-//    @JsonInclude(value = JsonInclude.Include.NON_EMPTY, content = JsonInclude.Include.NON_NULL)
-    @RestResource(path = "menu")
-    private Set<Menu> menus;
-
-
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "id=" + id() +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
