@@ -28,7 +28,7 @@ public class Menu extends AbstractId {
     @ManyToOne
     @JoinColumn(name = "restaurant_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @NotNull
+//    @NotNull
     private Restaurant restaurant;
 
     @Column(name = "local_date", nullable = false)

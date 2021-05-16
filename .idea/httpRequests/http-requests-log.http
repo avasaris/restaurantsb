@@ -1,3 +1,87 @@
+GET http://localhost:8080/api/restaurant/4/menu/5
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T152612.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/4/menu
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T152558.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/4
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T152551.200.json
+
+###
+
+POST http://localhost:8080/api/restaurant/4/menu
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "date": "2021-02-02"
+}
+
+<> 2021-05-16T152528.201.json
+
+###
+
+POST http://localhost:8080/api/restaurant/
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "name": "GAGARIN"
+}
+
+<> 2021-05-16T152506.201.json
+
+###
+
+POST http://localhost:8080/api/restaurant/4/menu
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "date": "2021-02-02"
+}
+
+<> 2021-05-16T152120.400.json
+
+###
+
+POST http://localhost:8080/api/restaurant/
+Authorization: Basic admin@yandex.ru admin
+Content-Type: application/json
+
+{
+  "name": "GAGARIN"
+}
+
+<> 2021-05-16T152023.201.json
+
+###
+
+GET http://localhost:8080/api/restaurant/4/menu/5
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-16T152015.200.json
+
+###
+
 GET http://localhost:8080/api/restaurant/1/menu/2
 Authorization: Basic admin@yandex.ru admin
 Accept: application/json
@@ -16,12 +100,12 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8080/api/restaurant/
+POST http://localhost:8080/api/restaurant/4/menu
 Authorization: Basic admin@yandex.ru admin
 Content-Type: application/json
 
 {
-  "name": "GAGARIN"
+  "date": "2021-02-02"
 }
 
 <> 2021-05-16T141332.201.json
@@ -572,143 +656,5 @@ Accept: application/json
 Content-Type: application/json
 
 <> 2021-05-14T215822.200.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-14T215806.201.json
-
-###
-
-GET http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-14T215731.200.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-14T215717.201.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-14T215558.409.json
-
-###
-
-GET http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-14T215548.200.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-14T214840.201.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-14T214133.201.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-14T213942.201.json
 
 ###
