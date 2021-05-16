@@ -2,7 +2,6 @@ package ru.topjava.restaurant.to;
 
 import lombok.Data;
 import ru.topjava.restaurant.model.Menu;
-import ru.topjava.restaurant.model.Restaurant;
 
 import java.time.LocalDate;
 

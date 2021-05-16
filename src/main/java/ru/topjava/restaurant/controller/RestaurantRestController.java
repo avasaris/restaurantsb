@@ -2,7 +2,6 @@ package ru.topjava.restaurant.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -10,15 +9,12 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import ru.topjava.restaurant.error.IllegalRequestDataException;
 import ru.topjava.restaurant.model.Restaurant;
-import ru.topjava.restaurant.model.Role;
-import ru.topjava.restaurant.model.User;
 import ru.topjava.restaurant.repository.RestaurantRepository;
 import ru.topjava.restaurant.to.RestaurantTo;
 import ru.topjava.restaurant.util.ValidationUtil;
 
 import javax.validation.Valid;
 import java.net.URI;
-import java.util.EnumSet;
 import java.util.List;
 
 @RestController

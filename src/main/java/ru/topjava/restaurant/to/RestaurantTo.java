@@ -1,11 +1,7 @@
 package ru.topjava.restaurant.to;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import ru.topjava.restaurant.model.Restaurant;
-
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Data
 public class RestaurantTo extends BaseTo {
