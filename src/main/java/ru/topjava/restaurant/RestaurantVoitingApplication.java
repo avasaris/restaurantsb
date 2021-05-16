@@ -21,8 +21,8 @@ public class RestaurantVoitingApplication implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         System.out.println(userRepository.findAll());
         System.out.println(userRepository.findByEmailIgnoreCase("admin@yandex.ru"));
-        System.out.println(restaurantRepository.findAllTo());
-        System.out.println(menuRepository.findAllTo());
+        System.out.println(restaurantRepository.findAll());
+        System.out.println(menuRepository.findAll());
         System.out.println(dishRepository.findAll());
     }
 

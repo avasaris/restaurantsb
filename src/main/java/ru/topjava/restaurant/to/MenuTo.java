@@ -16,7 +16,7 @@ public class MenuTo extends BaseTo {
         this.date = date;
     }
 
-    public MenuTo(Menu r) {
-        this(r.id(), r.getRestaurant().id(), r.getDate());
+    public MenuTo(Menu menu) {
+        this(menu.id(), menu.getRestaurant().id(), menu.getDate());
     }
 }

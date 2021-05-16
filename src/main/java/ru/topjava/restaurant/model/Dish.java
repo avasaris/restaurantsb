@@ -26,7 +26,7 @@ public class Dish extends AbstractId {
     @Column(name = "price", precision = 8, scale = 2, nullable = false)
     @Range(min = 0)
     @NotNull
-    BigDecimal price;
+    private BigDecimal price;
 
     @Column(name = "name", nullable = false)
     @NotBlank
@@ -35,14 +35,13 @@ public class Dish extends AbstractId {
     @ManyToOne
     @JoinColumn(name = "menu_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @NotNull
     private Menu menu;
 
     @Override
     public String toString() {
         return "Dish{" +
                 "id=" + id() +
-                ", menu_id=" + menu.id() +
+                ", menu_id=" + (menu == null ? "null" : menu.id()) +
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 '}';
