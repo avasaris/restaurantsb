@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.topjava</groupId>
-	<artifactId>restaurantsb</artifactId>
+	<artifactId>restaurant</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>restaurantsb</name>
+	<name>restaurant</name>
 	<description>Demo graduation project on Spring Boot</description>
 	<properties>
 		<java.version>15</java.version>
