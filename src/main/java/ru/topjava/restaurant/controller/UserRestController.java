@@ -19,10 +19,12 @@ import java.net.URI;
 import java.util.EnumSet;
 
 @RestController
-@RequestMapping(value = "/api/account")
+@RequestMapping(value = UserRestController.URL)
 @AllArgsConstructor
 @Slf4j
 public class UserRestController {
+    static final String URL = "/api/account";
+
     private final UserRepository userRepository;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)

@@ -3,6 +3,8 @@ package ru.topjava.restaurant.model;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -10,19 +12,20 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "vote",
         uniqueConstraints = {@UniqueConstraint(
-                columnNames = {"user_id", "restaurant_id", "local_date"},
-                name = "vote_unique_user_restaurant_date")})
+                columnNames = {"user_id", "menu_id"},
+                name = "vote_unique_user_restaurant")})
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class Vote extends AbstractId {
 
-    @Column(name="local_date")
-    private LocalDate date;
-
     @OneToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private User user;
 
     @OneToOne
-    private Restaurant restaurant;
+    @JoinColumn(name = "menu_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Menu menu;
 
 }

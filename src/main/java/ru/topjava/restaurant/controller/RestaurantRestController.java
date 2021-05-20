@@ -10,12 +10,14 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import ru.topjava.restaurant.error.IllegalRequestDataException;
 import ru.topjava.restaurant.model.Restaurant;
 import ru.topjava.restaurant.repository.RestaurantRepository;
+import ru.topjava.restaurant.to.MenuTo;
 import ru.topjava.restaurant.to.RestaurantTo;
 import ru.topjava.restaurant.util.ValidationUtil;
 
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/api/restaurant")
@@ -27,7 +29,7 @@ public class RestaurantRestController {
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public List<RestaurantTo> getAll() {
         log.info("getAll");
-        return restaurantRepository.findAllTo();
+        return restaurantRepository.findAll().stream().map(RestaurantTo::new).collect(Collectors.toList());
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)

@@ -12,7 +12,9 @@ import java.util.List;
 @Repository
 public interface DishRepository extends JpaRepository<Dish, Integer> {
 
+    // TODO return Optional
     List<Dish> findByMenuId(Integer menuId);
 
+    // TODO return Optional
     Menu findByMenuIdAndId(Integer menuId, Integer dishId);
 }

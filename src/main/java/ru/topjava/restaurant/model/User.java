@@ -9,6 +9,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -26,6 +27,10 @@ public class User extends AbstractId implements Serializable {
     @Size(max = 100)
     private String email;
 
+    @Column(name="passwd")
+    @Size(max = 20)
+    private String password;
+
     @Enumerated(EnumType.STRING)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "role"}, name = "user_roles_unique")})
     @Column(name = "role")
@@ -34,12 +39,10 @@ public class User extends AbstractId implements Serializable {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Set<Role> roles;
 
-    @Column(name="passwd")
-    @Size(max = 20)
-    private String password;
-
-    public User(String email, Role... roles) {
+    public User(Integer userId, String email, String password, Set<Role> roles) {
+        super(userId);
         this.email = email;
-        this.roles = Set.of(roles);
+        this.password = password;
+        this.roles = roles;
     }
 }
