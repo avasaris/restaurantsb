@@ -10,6 +10,7 @@ import ru.topjava.restaurant.AuthUser;
 import ru.topjava.restaurant.error.IllegalRequestDataException;
 import ru.topjava.restaurant.model.Menu;
 import ru.topjava.restaurant.model.Restaurant;
+import ru.topjava.restaurant.model.Role;
 import ru.topjava.restaurant.model.Vote;
 import ru.topjava.restaurant.repository.MenuRepository;
 import ru.topjava.restaurant.repository.RestaurantRepository;
@@ -37,7 +38,10 @@ public class VoteRestController {
         Menu menu = menuRepository.findByRestaurantIdAndDate(restaurant.id(), LocalDate.now())
                 .orElseThrow(() -> new IllegalRequestDataException("This restaurant doesn't have menu for today"));
 
-        // TODO Add check for ROLES
+        if(authUser.getUser().getRoles().contains(Role.ADMIN)) {
+            throw new SecurityException("You don't have permissions for voting");
+        }
+
         // TODO Add check if vote exists and allow to save if current time lower than 11:00
         voteRepository.save(new Vote(authUser.getUser(), menu));
     }
