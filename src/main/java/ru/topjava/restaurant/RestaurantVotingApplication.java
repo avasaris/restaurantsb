@@ -11,7 +11,7 @@ import ru.topjava.restaurant.repository.UserRepository;
 
 @SpringBootApplication
 @AllArgsConstructor
-public class RestaurantVoitingApplication implements ApplicationRunner {
+public class RestaurantVotingApplication implements ApplicationRunner {
     private final UserRepository userRepository;
     private final RestaurantRepository restaurantRepository;
     private final MenuRepository menuRepository;

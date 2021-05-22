@@ -36,6 +36,7 @@ public class MenuRestController {
         return new MenuTo(menuRepository.findByRestaurantIdAndId(restaurantId, menuId));
     }
 
+    // TODO check user rights
     @PostMapping(value = "/{restaurantId}/menu", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.CREATED)
     public MenuTo createMenu(@PathVariable Integer restaurantId, @Valid @RequestBody Menu menu) {

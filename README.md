@@ -24,12 +24,17 @@ As a result, provide a link to github repository. It should contain the code, RE
 
 ADMIN, USER:
 * GET /api/restaurant - list all restaurant
-* GET /api/restaurant/{id} - show restaurant profile for ID
+* GET /api/restaurant/{restaurantId} - show restaurant profile
 * POST /api/restaurant - create new restaurant
 
 #### MENU CRUD
 
 ADMIN, USER:
+* GET /api/restaurant/{restaurantId}/menu - list all menus for restaurant
+* GET /api/restaurant/{restaurantId}/menu/{menuId} - show menu details for restaurant
+* POST /api/restaurant/{restaurantId}/menu - create new menu for restaurant
 
-* GET /api/restaurant/{restaurantId}/menu - list all menus for restaurant ID
-* 
+#### VOTING
+
+USER:
+* POST /api/restaurant/{restaurantId}/vote - give the vote for the restaurant
