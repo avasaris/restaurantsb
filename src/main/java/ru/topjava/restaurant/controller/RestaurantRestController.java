@@ -40,7 +40,6 @@ public class RestaurantRestController {
         return new RestaurantTo(restaurant);
     }
 
-    // TODO check for user rights
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.CREATED)
     public ResponseEntity<RestaurantTo> add(@Valid @RequestBody Restaurant restaurant) {

@@ -1,6 +1,6 @@
 INSERT INTO USERS (EMAIL, PASSWD)
-VALUES ('user@yandex.ru', '{noop}user'),
-       ('admin@yandex.ru', '{noop}admin');
+VALUES ('user@mail.ru', '{noop}passwd'),
+       ('admin@yandex.ru', '{noop}passwd');
 
 INSERT INTO USER_ROLE (ROLE, USER_ID)
 VALUES ('USER', 1),
@@ -13,10 +13,10 @@ VALUES ('BUSINESS LUNCH'),
        ('HLEB');
 
 INSERT INTO MENU (LOCAL_DATE, RESTAURANT_ID)
-VALUES ('2021-01-01', 1),
-       ('2021-01-02', 1),
-       ('2021-01-01', 2),
-       ('2021-01-01', 3);
+VALUES (CURRENT_DATE(), 1),
+       (CURRENT_DATE(), 2),
+       (CURRENT_DATE(), 3),
+       (CURRENT_DATE() - 1, 1);
 
 INSERT INTO DISH (NAME, PRICE, MENU_ID)
 VALUES ('BORSH', 10.50, 1),
