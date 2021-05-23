@@ -16,6 +16,7 @@ import ru.topjava.restaurant.repository.RestaurantRepository;
 import ru.topjava.restaurant.repository.VoteRepository;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 @RestController
 @RequestMapping(value = "/api/restaurant")
@@ -25,6 +26,8 @@ public class VoteRestController {
     private VoteRepository voteRepository;
     private RestaurantRepository restaurantRepository;
     private MenuRepository menuRepository;
+
+    private final LocalTime VOTE_BARRIER = LocalTime.parse("11:00:00");
 
     @PostMapping(value = "/{restaurantId}/vote", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.CREATED)
@@ -37,8 +40,16 @@ public class VoteRestController {
         Menu menu = menuRepository.findByRestaurantIdAndDate(restaurant.id(), LocalDate.now())
                 .orElseThrow(() -> new IllegalRequestDataException("This restaurant doesn't have menu for today"));
 
-        // TODO Add check if vote exists and allow to save if current time lower than 11:00
-        voteRepository.save(new Vote(authUser.getUser(), menu));
+        Vote newVote = new Vote(authUser.getUser(), menu);
+        Vote existVote = voteRepository.findByUserIdAndMenuId(authUser.getUser().id(), menu.id());
+        System.out.println(existVote);
+
+        if(LocalTime.now().compareTo(VOTE_BARRIER) <= 0) {
+            voteRepository.save(newVote);
+        } else {
+
+        }
+
     }
 
 

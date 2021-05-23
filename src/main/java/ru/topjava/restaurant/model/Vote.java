@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Table(name = "vote",
         uniqueConstraints = {@UniqueConstraint(
                 columnNames = {"user_id", "menu_id"},
-                name = "vote_unique_user_restaurant")})
+                name = "vote_unique_user_menu")})
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class Vote extends AbstractId {
