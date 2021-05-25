@@ -47,7 +47,9 @@ public class VoteRestController {
         // если не голосовал, то сохранить новую запись
 
 //        Vote newVote = new Vote(authUser.getUser(), menu);
-//        Vote existVote = voteRepository.findByUserIdAndMenuId(authUser.getUser().id(), menu.id());
+        Vote existVote = voteRepository.findByUserIdAndMenuId(authUser.getUser().id(), menu.id());
+
+
 
 //        voteRepository.save(newVote);
 

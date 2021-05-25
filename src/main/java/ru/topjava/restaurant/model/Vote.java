@@ -10,10 +10,10 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "vote",
+@Table(name = "vote")/*,
         uniqueConstraints = {@UniqueConstraint(
                 columnNames = {"user_id", "menu_id"},
-                name = "vote_unique_user_menu")})
+                name = "vote_unique_user_menu")})*/ // TODO Enable this constraint
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class Vote extends AbstractId {
