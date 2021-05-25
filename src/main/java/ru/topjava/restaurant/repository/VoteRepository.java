@@ -7,8 +7,10 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.topjava.restaurant.model.Menu;
 import ru.topjava.restaurant.model.User;
 import ru.topjava.restaurant.model.Vote;
+import ru.topjava.restaurant.to.VoteTo;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @Transactional(readOnly = true)

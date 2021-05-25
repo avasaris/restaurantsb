@@ -11,12 +11,15 @@ import ru.topjava.restaurant.error.IllegalRequestDataException;
 import ru.topjava.restaurant.model.Menu;
 import ru.topjava.restaurant.model.Restaurant;
 import ru.topjava.restaurant.model.Vote;
+import ru.topjava.restaurant.repository.IVoteProjection;
 import ru.topjava.restaurant.repository.MenuRepository;
 import ru.topjava.restaurant.repository.RestaurantRepository;
 import ru.topjava.restaurant.repository.VoteRepository;
+import ru.topjava.restaurant.to.VoteTo;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/restaurant")
@@ -50,7 +53,12 @@ public class VoteRestController {
         voteRepository.save(todayVote);
     }
 
+    @GetMapping(value = "/top")
+    public List<IVoteProjection> findAllForToday(){
+        log.info("user {} ask for restaurant top");
 
+        return menuRepository.findByDate(LocalDate.now());
+    }
 
 
 }
