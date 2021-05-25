@@ -57,6 +57,8 @@ public class VoteRestController {
 //            throw new IllegalRequestDataException("You trying voting twice");
 //        }
 
+        voteRepository.save(new Vote(authUser.getUser(), menu));
+
     }
 
 
