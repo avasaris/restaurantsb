@@ -1,3 +1,164 @@
+POST http://localhost:8080/api/restaurant/2/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/2/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/2/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/2/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/2/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-25T223413.422.json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-25T223008.422.json
+
+###
+
+POST http://localhost:8080/api/restaurant/2/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/2/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-25T214525.500.json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-25T211721.500.json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-25T211652.500.json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic admin@yandex.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-25T211205.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/1/menu/1
+Authorization: Basic admin@yandex.ru admin
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-25T211132.401.json
+
+###
+
 POST http://localhost:8080/api/restaurant/1/vote
 Authorization: Basic admin@yandex.ru admin
 Accept: application/json
@@ -17,7 +178,7 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8080/api/restaurant/1/menu/1
-Authorization: Basic admin@yandex.ru admin
+Authorization: Basic admin@yandex.ru passwd
 Accept: application/json
 Content-Type: application/json
 
@@ -280,359 +441,5 @@ Content-Type: application/json
 }
 
 <> 2021-05-15T204520.400.json
-
-###
-
-GET http://localhost:8080/api/restaurant/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-15T204311.200.json
-
-###
-
-GET http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-15T163632.200.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T163603.201.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T161814.201.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T161521.201.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T161141.201.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T160320.201.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T160000.409.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T155900.409.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T155555.409.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T155552.409.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T155440.409.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T093144.201.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T092953.409.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T092745.409.json
-
-###
-
-GET http://localhost:8080/api/books
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-15T085122.404.json
-
-###
-
-GET http://localhost:8080/api/libraries/1/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-15T085108.200.json
-
-###
-
-GET http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-15T085050.200.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T085038.201.json
-
-###
-
-GET http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-15T085017.200.json
-
-###
-
-POST http://localhost:8080/api/libraries/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "library1",
-  "books": [
-    {
-      "title": "book1"
-    },
-    {
-      "title": "book2"
-    }
-  ]
-}
-
-<> 2021-05-15T082929.201.json
 
 ###

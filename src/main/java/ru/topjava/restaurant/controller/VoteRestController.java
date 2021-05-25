@@ -40,27 +40,14 @@ public class VoteRestController {
         Menu menu = menuRepository.findByRestaurantIdAndDate(restaurant.id(), LocalDate.now())
                 .orElseThrow(() -> new IllegalRequestDataException("This restaurant doesn't have menu for today"));
 
-        // проверить, если голос дублируется то выдать ошибку
-        // проверить что юзер уже голосовал сегодня. (по userID и сегодняшним датам в menu)
-        // если голосовал и времени меньше 11:00, то обновить его запись (как?)
-        // если голосовал и времени больше 11:00, то выдать ошибку
-        // если не голосовал, то сохранить новую запись
+        Vote todayVote = voteRepository.findByUserAndMenuDate(authUser.getUser(), LocalDate.now())
+                .orElse(new Vote(authUser.getUser(), menu));
 
-//        Vote newVote = new Vote(authUser.getUser(), menu);
-        Vote existVote = voteRepository.findByUserIdAndMenuId(authUser.getUser().id(), menu.id());
+        if(LocalTime.now().compareTo(VOTE_BARRIER) <= 0) {
+                todayVote.setMenu(menu);
+        }
 
-
-
-//        voteRepository.save(newVote);
-
-//        if(LocalTime.now().compareTo(VOTE_BARRIER) <= 0) {
-//
-//        } else {
-//            throw new IllegalRequestDataException("You trying voting twice");
-//        }
-
-        voteRepository.save(new Vote(authUser.getUser(), menu));
-
+        voteRepository.save(todayVote);
     }
 
 
