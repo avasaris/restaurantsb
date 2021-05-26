@@ -77,6 +77,12 @@ ADMIN, USER:
 curl -s -X POST -H 'Content-Type: application/json' http://localhost:8080/api/restaurant/1/vote --user user@mail.ru:passwd
 ```
 
+* GET http://localhost:8080/api/restaurant/top - to watch voting result for today
+```shell 
+curl -s http://localhost:8080/api/restaurant/top --user user@mail.ru:passwd
+```
+
+
 #### USERS CRUD
 
 ANONYMOUS:
