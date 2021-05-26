@@ -3,6 +3,15 @@ Authorization: Basic user@mail.ru passwd
 Accept: application/json
 Content-Type: application/json
 
+<> 2021-05-26T083650.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/top
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
 <> 2021-05-26T082549.200.json
 
 ###
@@ -410,14 +419,5 @@ Accept: application/json
 Content-Type: application/json
 
 <> 2021-05-16T141350.200.json
-
-###
-
-GET http://localhost:8080/api/restaurant/1/menu
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-16T141339.200.json
 
 ###

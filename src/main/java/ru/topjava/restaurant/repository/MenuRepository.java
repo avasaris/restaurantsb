@@ -23,6 +23,6 @@ public interface MenuRepository extends JpaRepository<Menu, Integer> {
 
     Optional<Menu> findByRestaurantIdAndDate(Integer restaurantId, LocalDate date);
 
-    @Query(value = "SELECT new ru.topjava.restaurant.to.VoteTo(m.restaurant.id, COUNT(v)) FROM Menu m LEFT OUTER JOIN Vote v ON m.id = v.menu.id WHERE m.date = :localDate GROUP BY m.restaurant.id")
+    @Query("SELECT new ru.topjava.restaurant.to.VoteTo(m.restaurant.id, COUNT(v)) FROM Menu m LEFT OUTER JOIN Vote v ON m.id = v.menu.id WHERE m.date = :localDate GROUP BY m.restaurant.id")
     List<VoteTo> findByDate(LocalDate localDate);
 }
