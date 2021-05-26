@@ -3,6 +3,31 @@ Authorization: Basic user@mail.ru passwd
 Accept: application/json
 Content-Type: application/json
 
+<> 2021-05-26T085831.200.json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/api/restaurant/top
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-26T085823.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/top
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
 <> 2021-05-26T083650.200.json
 
 ###
@@ -389,35 +414,5 @@ Content-Type: application/json
 }
 
 <> 2021-05-16T152120.400.json
-
-###
-
-POST http://localhost:8080/api/restaurant/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "GAGARIN"
-}
-
-<> 2021-05-16T152023.201.json
-
-###
-
-GET http://localhost:8080/api/restaurant/4/menu/5
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-16T152015.200.json
-
-###
-
-GET http://localhost:8080/api/restaurant/1/menu/2
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-16T141350.200.json
 
 ###
