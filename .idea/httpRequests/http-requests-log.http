@@ -3,6 +3,47 @@ Authorization: Basic user@mail.ru passwd
 Accept: application/json
 Content-Type: application/json
 
+<> 2021-05-26T082549.200.json
+
+###
+
+POST http://localhost:8080/api/restaurant/1/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/api/restaurant/top
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-26T082527.200.json
+
+###
+
+POST http://localhost:8080/api/restaurant/2/vote
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/api/restaurant/top
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
+<> 2021-05-26T082458.200.json
+
+###
+
+GET http://localhost:8080/api/restaurant/top
+Authorization: Basic user@mail.ru passwd
+Accept: application/json
+Content-Type: application/json
+
 <> 2021-05-26T005116.200.json
 
 ###
@@ -378,56 +419,5 @@ Accept: application/json
 Content-Type: application/json
 
 <> 2021-05-16T141339.200.json
-
-###
-
-POST http://localhost:8080/api/restaurant/4/menu
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "date": "2021-02-02"
-}
-
-<> 2021-05-16T141332.201.json
-
-###
-
-POST http://localhost:8080/api/restaurant/
-Authorization: Basic admin@yandex.ru admin
-Content-Type: application/json
-
-{
-  "name": "GAGARIN"
-}
-
-<> 2021-05-16T140331.201.json
-
-###
-
-GET http://localhost:8080/api/restaurant/1/menu
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-16T135829.200.json
-
-###
-
-GET http://localhost:8080/api/restaurant/1/menu
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-16T135458.200.json
-
-###
-
-GET http://localhost:8080/api/restaurant/1/menu/2
-Authorization: Basic admin@yandex.ru admin
-Accept: application/json
-Content-Type: application/json
-
-<> 2021-05-16T135448.200.json
 
 ###

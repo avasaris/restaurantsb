@@ -1,13 +1,14 @@
 package ru.topjava.restaurant.to;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import ru.topjava.restaurant.model.Restaurant;
 
 @Data
-@AllArgsConstructor
 public class VoteTo {
     private final Integer restaurantId;
-    private final Integer counter;
+    private final Long counter;
 
+    public VoteTo(Integer restaurantId, Long counter) {
+        this.restaurantId = restaurantId;
+        this.counter = counter;
+    }
 }

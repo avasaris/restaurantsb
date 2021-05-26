@@ -5,11 +5,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import ru.topjava.restaurant.model.Menu;
-import ru.topjava.restaurant.to.MenuTo;
 import ru.topjava.restaurant.to.VoteTo;
 
 import java.time.LocalDate;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,6 +23,6 @@ public interface MenuRepository extends JpaRepository<Menu, Integer> {
 
     Optional<Menu> findByRestaurantIdAndDate(Integer restaurantId, LocalDate date);
 
-    @Query(value = "SELECT m.RESTAURANT_ID, COUNT(v.ID) FROM MENU AS m LEFT OUTER JOIN VOTE AS v ON m.ID = v.MENU_ID WHERE m.LOCAL_DATE = :localDate GROUP BY m.RESTAURANT_ID", nativeQuery = true)
-    List<IVoteProjection> findByDate(LocalDate localDate);
+    @Query(value = "SELECT new ru.topjava.restaurant.to.VoteTo(m.restaurant.id, COUNT(v)) FROM Menu m LEFT OUTER JOIN Vote v ON m.id = v.menu.id WHERE m.date = :localDate GROUP BY m.restaurant.id")
+    List<VoteTo> findByDate(LocalDate localDate);
 }
